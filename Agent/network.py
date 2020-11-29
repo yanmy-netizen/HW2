@@ -42,7 +42,7 @@ def build_fcn(minimap, screen, info, msize, ssize, num_action):
                                  num_outputs=1,
                                  kernel_size=1,
                                  stride=1,
-                                 activation_fn=None,
+                                 activation_fn=tf.nn.relu,
                                  scope='spatial_action')
   spatial_action = tf.nn.softmax(layers.flatten(spatial_action))
 
